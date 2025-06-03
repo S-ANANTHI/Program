@@ -13,3 +13,17 @@ function vowelCount(name){
     return count + " "+ vowelChar;
 }
 console.log(vowelCount("Chennai"));
+//--------------------------
+
+function v(name){
+    let vowel ="aeiou";
+    let ans = name.split("").filter(i=>vowel.includes(i));
+    return ans;
+}
+console.log(v("anu"));
+//------------------------------------
+function z(str) {
+    return str.split("").reduce((acc, val) =>{
+    return 'aeiou'.includes(val)?acc+1:acc}, 0);
+}
+console.log(z("Chennai"));
