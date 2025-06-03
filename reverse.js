@@ -6,3 +6,7 @@ function reverseName(name){
     return rev;
 }
 console.log(reverseName("Chennai"));
+//---------------------
+function reverseNameReduce(name){
+    return name.split('').reduce((rev, char) => char + rev, '');
+}
