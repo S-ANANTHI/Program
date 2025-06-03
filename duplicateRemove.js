@@ -16,3 +16,25 @@ function duplicate(arr){
 }
 console.log(duplicate([1, 2, 2, 3, 4, 4, 5]));
 console.log(duplicate(['a','q','r','a']));
+
+//------------------
+arr=[6,9,5,4,7,3,6,3];
+let a=arr.reduce((acc,val) => {
+    if(acc[val]) 
+        acc[val]++;
+    else 
+        acc[val]=1;
+    return acc;
+    }
+    ,{} ); 
+console.log(a)
+
+//---------------------
+arr2=[6,9,5,4,7,3,6,3];
+let b=arr2.reduce((acc,val) => {
+    if(!acc.includes(val)) 
+        acc.push(val);
+    return acc;
+    }
+    ,[] ); 
+console.log(b)
